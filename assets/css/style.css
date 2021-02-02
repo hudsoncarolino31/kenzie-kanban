@@ -84,6 +84,9 @@ header{
   width: 100%;
   box-sizing: border-box;
 }
+  header > div{
+    flex-basis: 209px;
+  }
     header .app_nome{}
         header .app_nome h1{
           font-size: 1.7rem;
@@ -98,11 +101,14 @@ header{
             display: block;
             width: 100%;
             max-width: 50px;
+            margin: 0 auto;
           }
           header .app_logo figure figcaption{}
-      header .app_menu_header{}
+      header .app_menu_header{
+        text-align: right;
+      }
         header .app_menu_header span{
-          display: block;
+          display: inline-block;
           background-color: rgb(255 255 255 / 0.3);
           padding: 1px 2px;
           border-radius: 4px;
