@@ -1,16 +1,16 @@
 class Board{
-    constructor(id,nome,secoes){
+    constructor(id,nome){
         this._id     = id;
         this._nome   = nome;
-        this._secoes = secoes;
+        this._secoes = [];
     }
 
     set nome(nome){
         this._nome = nome
     }
 
-    get  nome(nome){
-        this._nome = nome
+    get  nome(){
+        return this._nome 
     }
 
     adicionarSecao(secao){
@@ -21,3 +21,4 @@ class Board{
         this._secoes.splice(posicao,1)
     }
 }
+
