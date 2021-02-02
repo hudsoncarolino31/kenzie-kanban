@@ -1,0 +1,63 @@
+/*
+Theme Name: Desenvolvimentos
+Theme URI: http://www.desenvolvimentos.com.br
+Author: HC Desenvolvimentos
+Author URI: https://hcdesenvolvimentos.com.br;
+Description: Descrção do thema.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: desenvolvimentos
+Tags: 
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE (HC Desenvolvimentos v1)
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** TOPO
+**** RODAPÉ
+**** PÁGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+
+/* IMPORTAÇÃO DE ARQUIVOS*/
+	/*@import url("fonts.css");*/
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    /* IMPORTAÇÃO MEDIA QUERYS*/
+    
+    /* IMPORTAÇÃO DE ARQUIVOS*/
+    
+    
+    /* VARIÁVEIS */
+    :root{
+      --montserrat: 'Montserrat', sans-serif;
+      --open-sans: 'Open Sans', sans-serif;
+      --azul-principal: #009bdb;
+    }
+    /* VARIÁVEIS */
+    
+    /* IMPORTAÇÃO DE FONTES*/
+        @font-face {
+            
+        }
+    
+    /* IMPORTAÇÃO DE FONTES*/
+    
+    /* GERAL */
+        html, body, figure, p, h1, h2, h3, h4, h5, h6, ul{
+            margin: 0;
+            padding: 0;
+            font-family: 'Rubik', sans-serif;
+            box-sizing: border-box;
+        }
+    /* GERAL */

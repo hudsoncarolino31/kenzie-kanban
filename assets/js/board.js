@@ -13,11 +13,11 @@ class Board{
         this._nome = nome
     }
 
-    criarSecao(nome){
-
+    adicionarSecao(secao){
+        this._secoes.push(secao)
     }
 
     removerSecao(posicao){
-
+        this._secoes.splice(posicao,1)
     }
 }
