@@ -24,7 +24,7 @@ function appSecoes(){
     appsecao.innerHTML = footer
     app_secoes.appendChild(appsecao)
 }
-appSecoes()
+//appSecoes()
 
 /************************** 
 SEÇÃO - CRIA HEADER
@@ -59,14 +59,12 @@ function templateCards() {
 SEÇÃO - FOOTER 
 ***************************/
 function appSecaoFooter(){
-    const templateFooter = "<div class=1app_secao_footer1>"+ 
+    const templateFooter = "<div class=app_secao_footer>"+ 
     "<button>Adicionar novo card</button>"+
-    "<div class='app_secao_footer_card'>"+
-    "<label for='tituloCard'>Título do card</label>"+
+    "<div class='app_secao_footer_card hidden'>"+
     "<input type='text' name='tituloCard' id='tituloCard' placeholder='Título do card'>"+
-    "<label for='descricaoCard'>Descrção do card</label>"+
-    "<textarea name='descricaoCard' id='descricaoCard' value='Descrção do card'></textarea>"+
-    "<button class='app_secao_footer_salvar_card'></button></div></div>"
+    "<textarea placeholder='Descrição' name='descricaoCard' id='descricaoCard' value='Descrção do card'></textarea>"+
+    "<button class='app_secao_footer_salvar_card'>Add</button></div></div>"
     return templateFooter
 }
 
