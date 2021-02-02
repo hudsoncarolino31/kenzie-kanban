@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  </head>
+  <body>
     <div id="app">
-
-        <header>
-
-            <div class="app_nome">
-                <h1>Kenzie Kanban</h1>
+      <header>
+        <div class="app_nome">
+          <h1>Kenzie Kanban</h1>
+        </div>
+        <div class="app_logo">
+          <figure>
+            <img src="./assets/img/logoblue.svg" alt="Logo Kenzie" />
+            <figcaption class="hidden">Logo Kenzie</figcaption>
+          </figure>
+        </div>
+        <div class="app_menu_header">
+          <span>
+            <img src="./assets/img/menu.svg" alt="Menu icon">
+          </span>
+        </div>
+      </header>
+      <section class="app_board">
+        <div class="app_secoes">
+          <div class="app_secao">
+            <div class="app_secao_header">
+              <input type="text" value="Nome seção" />
             </div>
-
-            <div class="app_logo">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>Logo</figcaption> 
-                </figure>
+            <ul class="app_secao_cards">
+              <li>
+                <h2>Título card</h2>
+                <p>Descrição do card, lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              </li>
+            </ul>
+            <div class="app_secao_footer">
+              <button>Adicionar novo card</button>
+              <div class="app_secao_footer_card hidden">
+                <label for="tituloCard">Título do card</label>
+                <input
+                  type="text"
+                  name="tituloCard"
+                  id="tituloCard"
+                  placeholder="Título do card"
+                />
+                <label for="descricaoCard">Descrição do card</label>
+                <textarea
+                  name="descricaoCard"
+                  id="descricaoCard"
+                  value="Descrção do card"
+                ></textarea>
+                <button class="app_secao_footer_salvar_card">Add</button>
+              </div>
             </div>
-
-            <div class="app_menu_header">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-
-        </header>
-
-        <section class="app_board">
-
-            <div class="app_secoes">
-
-                <div class="app_secao">
-                    <div class="app_secao_header">
-                        <input type="text" value="Nome seção">
-                    </div>
-
-                    <ul>
-                        <li></li>
-                    </ul>
-
-                    <div class="app_secao_footer">
-                        <button>Adicionar novo card</button>
-
-                        <div class="app_secao_footer_card">
-                            <label for="tituloCard">Título do card</label>
-                            <input type="text" name="tituloCard" id="tituloCard" placeholder="Título do card">
-                           
-                            <label for="descricaoCard">Descrção do card</label>
-                            <textarea name="descricaoCard" id="descricaoCard" value="Descrção do card"></textarea>
-                            <button class="app_secao_footer_salvar_card"></button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-        </section>
-        
-    
-    
+          </div>
+        </div>
+      </section>
     </div>
+
     <script src="./assets/js/board.js"></script>
     <script src="./assets/js/secao.js"></script>
     <script src="./assets/js/card.js"></script>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
