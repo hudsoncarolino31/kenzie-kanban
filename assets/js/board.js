@@ -9,8 +9,8 @@ class Board{
         this._nome = nome
     }
 
-    get  nome(nome){
-        this._nome = nome
+    get  nome(){
+        return this._nome 
     }
 
     adicionarSecao(secao){
