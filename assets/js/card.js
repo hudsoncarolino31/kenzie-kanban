@@ -18,7 +18,15 @@ class Card{
        return this._descricao
     }
 
+    set  idSecao(idSecao){
+        this._idSecao = idSecao
+    }
+
     get  idSecao(){
         return this._idSecao
     }
+
 }
+
+
+

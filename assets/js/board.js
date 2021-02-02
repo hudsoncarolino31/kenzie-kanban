@@ -1,8 +1,8 @@
 class Board{
-    constructor(id,nome,secoes){
+    constructor(id,nome){
         this._id     = id;
         this._nome   = nome;
-        this._secoes = secoes;
+        this._secoes = [];
     }
 
     set nome(nome){
@@ -21,3 +21,4 @@ class Board{
         this._secoes.splice(posicao,1)
     }
 }
+
