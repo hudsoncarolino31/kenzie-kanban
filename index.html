@@ -27,7 +27,7 @@
       </header>
       <section class="app_board">
         <div class="app_secoes">
-          <div class="app_secao">
+          <div class="app_secao hidden">
             <div class="app_secao_header">
               <input type="text" value="Nome seção" />
             </div>
@@ -39,7 +39,7 @@
             </ul>
             <div class="app_secao_footer">
               <button>Adicionar novo card</button>
-              <div class="app_secao_footer_card hidden">
+              <div class="app_secao_footer_card">
                 <input
                   type="text"
                   name="tituloCard"
@@ -56,42 +56,15 @@
               </div>
             </div>
           </div>
-          <div class="app_secao">
-            <div class="app_secao_header">
-              <input type="text" value="Nome seção" />
-            </div>
-            <ul class="app_secao_cards">
-              <li>
-                <h2>Título card</h2>
-                <p>Descrição do card, lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-              </li>
-            </ul>
-            <div class="app_secao_footer">
-              <button>Adicionar novo card</button>
-              <div class="app_secao_footer_card hidden">
-                <input
-                  type="text"
-                  name="tituloCard"
-                  id="tituloCard"
-                  placeholder="Título"
-                />
-                <textarea
-                  name="descricaoCard"
-                  id="descricaoCard"
-                  placeholder="Descrição"
-                  value="Descrção do card"
-                ></textarea>
-                <button class="app_secao_footer_salvar_card">Add</button>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
     </div>
 
-    <script src="./assets/js/board.js"></script>
+    <script src="./assets/js/workspace.js"></script>
     <script src="./assets/js/secao.js"></script>
     <script src="./assets/js/card.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/interface.js"></script>
   </body>
 </html>

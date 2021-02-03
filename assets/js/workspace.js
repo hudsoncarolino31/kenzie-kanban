@@ -1,4 +1,4 @@
-class Board{
+class Workspace{
     constructor(id,nome){
         this._id     = id;
         this._nome   = nome;
@@ -13,6 +13,10 @@ class Board{
         return this._nome 
     }
 
+    get secoes(){
+        return this._secoes
+    }
+
     adicionarSecao(secao){
         this._secoes.push(secao)
     }
@@ -20,5 +24,7 @@ class Board{
     removerSecao(posicao){
         this._secoes.splice(posicao,1)
     }
+
+
 }
 

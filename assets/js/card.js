@@ -6,7 +6,7 @@ class Card{
         this._idSecao   = 0;
     }
 
-    get  nome(){
+    get nome(){
         return this._nome
     }
 
@@ -14,15 +14,15 @@ class Card{
         this._descricao = descricao
     }
 
-    get  descricao(){
+    get descricao(){
        return this._descricao
     }
 
-    set  idSecao(idSecao){
+    set idSecao(idSecao){
         this._idSecao = idSecao
     }
 
-    get  idSecao(){
+    get idSecao(){
         return this._idSecao
     }
 

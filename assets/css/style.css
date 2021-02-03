@@ -161,6 +161,7 @@ header{
       white-space: normal;
       margin: 0 10px 0 0;
       display: inline-block;
+      vertical-align: top;
     }
       .app_board .app_secoes .app_secao .app_secao_header{}
         .app_board .app_secoes .app_secao .app_secao_header input{

@@ -5,6 +5,10 @@ class Secao{
         this._cards = [];
     }
 
+    get id(){
+        return this._id
+    }
+
     get nome(){
         return this._nome
     }
