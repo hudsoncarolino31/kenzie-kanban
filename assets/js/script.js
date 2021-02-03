@@ -6,10 +6,9 @@ workspaceSesecao.adicionarCard(card)
 workspaceKenzie.adicionarSecao(workspaceSesecao)
 
 // -----------------------------------//
-// SEÇÃO
+// ADICIONA SECÃO
 // -----------------------------------//
 const appsecoes = document.querySelector(".app_secoes")
-const appbuttonaddsecao = document.querySelector(".app_button_add_secao")
 
 workspaceKenzie.secoes.forEach(imprimirSecoes)
 function imprimirSecoes(secao){
@@ -34,13 +33,36 @@ function imprimirSecoes(secao){
     appsecao.appendChild(footer)
     appsecoes.appendChild(appsecao)
 
-    return appsecao
+    adicionarControles()
 }
 
+const appbuttonaddsecao = document.querySelector(".app_input_add_secao")
+const appContainerInput = document.querySelector(".app_container_add_secao>input")
 appbuttonaddsecao.addEventListener("click", adicionarNovaSecao)
-function adicionarNovaSecao(nome) {
-    const workspaceNovaSesecao = new Secao("Fazendo")
+function adicionarNovaSecao() {
+
+    const workspaceNovaSesecao = new Secao(appContainerInput.value)
     workspaceKenzie.adicionarSecao(workspaceNovaSesecao)
+    imprimirSecoes(workspaceNovaSesecao)
+
+    
+}
+
+// -----------------------------------//
+// ADICIONA CARDS
+// -----------------------------------//
+
+function salvarCard(e) {
+      
+    const secaoId = e.target.id
+    const appSecaoFooter = e.target.parentElement
+    const input  = appSecaoFooter.querySelector("input").value
+    const textarea = appSecaoFooter.querySelector("textarea").value
+
+    const card = new Card(secaoId,input,textarea)
+    workspaceKenzie.adicionarCard(secaoId,card)
+   
+    templateCards(secaoId,card)
 }
 
 
@@ -53,30 +75,30 @@ function adicionarNovaSecao(nome) {
 
 
 
+// -----------------------------------//
+// CONTROLES
+// -----------------------------------//
+function adicionarControles(){
+    const botaoAddCard = document.querySelectorAll(".app_secao_footer > button")
+    botaoAddCard.forEach(adicionarEventoAdd)
 
+    const botaoSalvarCard = document.querySelectorAll(".app_secao_footer_salvar_card")
+    botaoSalvarCard.forEach(adicionarEventoSalvar)
+}
 
-
-
-
-const botaoAddCard = document.querySelectorAll(".app_secao_footer > button")
-botaoAddCard.forEach(adicionarEventoAdd)
 function adicionarEventoAdd(elemento) {
-    elemento.addEventListener('click' ,function(e) {
-        e.target.nextElementSibling.classList.toggle("hidden") 
-    })
+    elemento.removeEventListener('click' ,adicionarAbrirCard)
+    elemento.addEventListener('click' ,adicionarAbrirCard)
 }
 
-const botaoSalvarCard = document.querySelectorAll(".app_secao_footer_salvar_card")
-botaoSalvarCard.forEach(adicionarEventoSalvar)
+function adicionarAbrirCard(e) {
+    e.target.nextElementSibling.classList.toggle("hidden") 
+}
+
 function adicionarEventoSalvar(elemento) {
-   // elemento.addEventListener('click' , salvarCard)
+    elemento.removeEventListener('click' , salvarCard)
+    elemento.addEventListener('click' , salvarCard)
 }
-
-
-
-/************************** 
-CRIAR SEÇÃO
-***************************/
 
 
 /************************** 
@@ -99,7 +121,7 @@ function appSecaoHeader(secaoNome){
 /************************** 
 SEÇÃO - CARDS
 ***************************/
-function templateCards(card,idSecao) {
+function templateCards(idSecao,card) {
     const secao = document.querySelector(`.app_secao[data-id="${idSecao}"] ul`)
     const li = document.createElement("li")
     const h2 = document.createElement("h2")
@@ -127,3 +149,11 @@ function appSecaoFooter(secaoId){
     appSecaoFooter.innerHTML = templateFooter
     return appSecaoFooter
 }
+
+
+const appButtonabrirSecao = document.querySelector('.app_add_secao .app_button_add_secao');
+const appContainerAddSecao = document.querySelector('.app_add_secao .app_container_add_secao');
+appButtonabrirSecao.addEventListener('click', function(){
+    appContainerAddSecao.classList.toggle('hidden');
+})
+

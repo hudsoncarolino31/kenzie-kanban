@@ -3,7 +3,7 @@ class Workspace{
         this._id     = id;
         this._nome   = nome;
         this._secoes = [];
-        this._idSecao = 1
+        this._idSecao = 0
     }
 
     set nome(nome){
@@ -22,6 +22,11 @@ class Workspace{
         secao.id = this._idSecao
         this._secoes.push(secao)
         this._idSecao++
+    }
+
+    adicionarCard(idSecao,card){
+        const secoes = this.secoes
+        secoes[idSecao].adicionarCard(card)
     }
 
     removerSecao(posicao){
