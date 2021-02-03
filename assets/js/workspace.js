@@ -25,6 +25,8 @@ class Workspace{
         this._secoes.splice(posicao,1)
     }
 
+    init(){
 
+    }
 }
 

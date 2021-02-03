@@ -1,10 +1,53 @@
+const workspaceKenzie = new Workspace(1,"Kenzie")
+const secao = new Secao(1,"Todo")
+const card = new Card(1,"Fazer","Descrica")
+secao.adicionarCard(card)
+workspaceKenzie.adicionarSecao(secao)
 
-const app_secoes   = document.querySelector(".app_secoes")
+// -----------------------------------//
+const app_secoes = document.querySelector(".app_secoes")
+
+workspaceKenzie.secoes.forEach(imprimirSecoes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const botaoAddCard = document.querySelectorAll(".app_secao_footer > button")
+botaoAddCard.forEach(adicionarEventoAdd)
+function adicionarEventoAdd(elemento) {
+    elemento.addEventListener('click' ,function(e) {
+        e.target.nextElementSibling.classList.toggle("hidden") 
+    })
+}
+
+const botaoSalvarCard = document.querySelectorAll(".app_secao_footer_salvar_card")
+botaoSalvarCard.forEach(adicionarEventoSalvar)
+function adicionarEventoSalvar(elemento) {
+   // elemento.addEventListener('click' , salvarCard)
+}
+
+
 
 /************************** 
 CRIAR SEÇÃO
 ***************************/
-function appSecoes(secao){
+function imprimirSecoes(secao){
     
     const secaoNome = secao.nome
     const secaoId   = secao.id
@@ -12,16 +55,11 @@ function appSecoes(secao){
     const header = appSecaoHeader(secaoNome)
     const footer = appSecaoFooter(secaoId)
 
-
-
     const appsecao = document.createElement("div")
     appsecao.classList.add("app_secao")
     appsecao.dataset.id = secaoId
 
     const listaCards = document.createElement("ul")
-   
-  
-    
 
     /************************** 
     SEÇÃO - LISTA DE CARDS
@@ -34,7 +72,6 @@ function appSecoes(secao){
 
     return appsecao
 }
-//appSecoes()
 
 /************************** 
 SEÇÃO - CRIA HEADER
@@ -66,7 +103,6 @@ function templateCards(card,idSecao) {
     li.appendChild(h2)
     li.appendChild(p)
 
-
     secao.appendChild(li)
 }
 
@@ -85,29 +121,3 @@ function appSecaoFooter(secaoId){
     appSecaoFooter.innerHTML = templateFooter
     return appSecaoFooter
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
