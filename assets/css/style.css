@@ -83,6 +83,7 @@ header{
   position: fixed;
   width: 100%;
   box-sizing: border-box;
+  z-index: 1;
 }
   header > div{
     flex-basis: 209px;
@@ -255,9 +256,48 @@ header{
           .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card .app_secao_footer_salvar_card:hover{
             background-color: #0763ce;
           }
+    
+    .app_board .app_secoes .app_add_secao{
+      display: inline-block;
+      vertical-align: top;
+      width: 400px;
+    }
+      .app_board .app_secoes .app_add_secao .app_button_add_secao{
+        display: inline-block;
+        width: 100%;
+        padding: 15px 0;
+        background-color: rgb(255 255 255 / 20%);
+        border: none;
+        font-size: 1rem;
+        border-radius: 4px;
+        color: #fff;
+        transition: ease-in-out .1s;
+        -webkit-transition: ease-in-out .1s;
+        -moz-transition: ease-in-out .1s;
+        -ms-transition: ease-in-out .1s;
+        -o-transition: ease-in-out .1s;
+        cursor: pointer;
+        outline: none;
+      }
+      .app_board .app_secoes .app_add_secao .app_button_add_secao:hover{
+        background-color: rgb(255 255 255 / 30%);
+      }
 /* INICIAL */
 
 /* EXTRAS */
+::-webkit-scrollbar{
+  background-color: transparent;
+  height: 12px;
+}
+::-webkit-scrollbar-button{}
+::-webkit-scrollbar-track{}
+::-webkit-scrollbar-track-piece{}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(255 255 255 / 20%);
+  border-radius: 14px;
+}
+::-webkit-scrollbar-corner{}
+::-webkit-resizer{}
 /* EXTRAS */
 
 /* IMPORTAÇÃO MEDIA QUERIES */

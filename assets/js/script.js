@@ -1,17 +1,47 @@
+
 const workspaceKenzie = new Workspace(1,"Kenzie")
-const secao = new Secao(1,"Todo")
+const workspaceSesecao = new Secao("Todo")
 const card = new Card(1,"Fazer","Descrica")
-secao.adicionarCard(card)
-workspaceKenzie.adicionarSecao(secao)
+workspaceSesecao.adicionarCard(card)
+workspaceKenzie.adicionarSecao(workspaceSesecao)
 
 // -----------------------------------//
-const app_secoes = document.querySelector(".app_secoes")
+// SEÇÃO
+// -----------------------------------//
+const appsecoes = document.querySelector(".app_secoes")
+const appbuttonaddsecao = document.querySelector(".app_button_add_secao")
 
 workspaceKenzie.secoes.forEach(imprimirSecoes)
+function imprimirSecoes(secao){
+    
+    const secaoNome = secao.nome
+    const secaoId   = secao.id
 
+    const header = appSecaoHeader(secaoNome)
+    const footer = appSecaoFooter(secaoId)
 
+    const appsecao = document.createElement("div")
+    appsecao.classList.add("app_secao")
+    appsecao.dataset.id = secaoId
 
+    const listaCards = document.createElement("ul")
 
+    /************************** 
+    SEÇÃO - LISTA DE CARDS
+    ***************************/
+    appsecao.appendChild(header)
+    appsecao.appendChild(listaCards)
+    appsecao.appendChild(footer)
+    appsecoes.appendChild(appsecao)
+
+    return appsecao
+}
+
+appbuttonaddsecao.addEventListener("click", adicionarNovaSecao)
+function adicionarNovaSecao(nome) {
+    const workspaceNovaSesecao = new Secao("Fazendo")
+    workspaceKenzie.adicionarSecao(workspaceNovaSesecao)
+}
 
 
 
@@ -47,31 +77,7 @@ function adicionarEventoSalvar(elemento) {
 /************************** 
 CRIAR SEÇÃO
 ***************************/
-function imprimirSecoes(secao){
-    
-    const secaoNome = secao.nome
-    const secaoId   = secao.id
 
-    const header = appSecaoHeader(secaoNome)
-    const footer = appSecaoFooter(secaoId)
-
-    const appsecao = document.createElement("div")
-    appsecao.classList.add("app_secao")
-    appsecao.dataset.id = secaoId
-
-    const listaCards = document.createElement("ul")
-
-    /************************** 
-    SEÇÃO - LISTA DE CARDS
-    ***************************/
-
-    appsecao.appendChild(header)
-    appsecao.appendChild(listaCards)
-    appsecao.appendChild(footer)
-    app_secoes.appendChild(appsecao)
-
-    return appsecao
-}
 
 /************************** 
 SEÇÃO - CRIA HEADER

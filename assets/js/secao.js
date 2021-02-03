@@ -1,12 +1,16 @@
 class Secao{
-    constructor(id,nome){
-        this._id    = id;
+    constructor(nome){
+        this._id    = 0;
         this._nome  = nome;
         this._cards = [];
     }
 
     get id(){
         return this._id
+    }
+
+    set id(id){
+        this._id = id
     }
 
     get nome(){
