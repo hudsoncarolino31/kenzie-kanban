@@ -1,8 +1,12 @@
 
 const workspaceKenzie = new Workspace(1,"Kenzie")
+
 const workspaceSesecao = new Secao("Todo")
+
 const card = new Card(1,"Fazer","Descrica")
+
 workspaceSesecao.adicionarCard(card)
+
 workspaceKenzie.adicionarSecao(workspaceSesecao)
 
 // -----------------------------------//
@@ -33,7 +37,7 @@ function imprimirSecoes(secao){
     appsecao.appendChild(footer)
     appsecoes.appendChild(appsecao)
 
-    adicionarControles()
+   adicionarControles()
 }
 
 const appbuttonaddsecao = document.querySelector(".app_input_add_secao")
